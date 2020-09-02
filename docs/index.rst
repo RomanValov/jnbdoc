@@ -10,6 +10,7 @@ Welcome to nbdocs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   task.01
    maps
 
 
