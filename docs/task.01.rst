@@ -131,8 +131,46 @@ You could check that GitHub will render not only \*.ipynb files in it's web-inte
 Step 8. Read the Docs
 ~~~~~~~~~~~~~~~~~~~~~
 
-When your files will be available on GitHub it's time to register an account on ReadTheDocs and link your GitHub repository.
+When your files are available on GitHub it's time to register an account on ReadTheDocs and link your GitHub repository.
 
 Go to https://readthedocs.org/accounts/login/ and press the ``Sign in with GitHub`` button.
 
 In the profile page of ReadTheDocs you will find ``Import project`` button, use it and select your repository from the list.
+
+Once imported all the machinery should be set up by ReadTheDocs to start build and set up rebuild on each commit to your repo.
+
+Please take a time to get familiar with ReadTheDocs interface.
+
+In general it's usefull to be able to check the status of the last build and view the build logs.
+
+Step 9. Notebooks on Read the Docs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default ReadTheDocs is not configured to use Notebooks extension previously used for local build.
+
+In order to change the limitations you have to add pair of configuration files to your repository.
+
+At first, add the ``requirements.txt`` file to the same dir where you have ``index.rst`` located and add following lines::
+
+    ipykernel
+    nbsphinx
+
+These lines will instruct ReadTheDocs build to download packages from the PyPI archive.
+
+On your local setup ``ipykernel`` is usually installed as a dependency for Jupyter
+and ``nbsphinx`` was installed as a part of the tutorial.
+
+At second, you have to add configuration file for ReadTheDocs service itself which relies on the ``requirements.txt`` defined.
+Configuration file for ReadTheDocs should be named ``.readthedocs.yml`` and should be located in top dir of your repository::
+
+    version: 2
+    formats: all
+    python:
+      version: 3
+      install:
+      - requirements: docs/requirements.txt
+    system_packages: true
+
+As you see in my case the version of Python interpreter is set to 3 and ``requirements.txt`` is located in ``docs`` subdir.
+
+Once files added do a commit and push to your repository, the ReadTheDocs will do the rebuild in a while.
