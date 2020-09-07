@@ -183,11 +183,11 @@ Step 10. Themming
 
 Sphinx supports themming. In my case Sphinx tools bundled with the distro are patched to use Alabaster theme by default.
 
-In order to force your documentation to use particular theme it should be configured via ``html_theme`` paramater.
+In order to force your documentation pages to use particular theme it should be configured via ``html_theme`` parameter.
 
 For example to use default ReadTheDocs theme you have to set ``html_theme='sphinx_rtd_theme'`` in your configuration file.
 
-Being default for ReadTheDocs it will be handled automatically on ReadTheDocs service.
+Being default for ReadTheDocs service it will be handled automatically on ReadTheDocs service.
 However if you wish to give it a try locally you have to install theme's python package::
 
     sudo pip3 install sphinx-rtd-theme
