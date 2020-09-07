@@ -172,7 +172,7 @@ Configuration file for ReadTheDocs should be named ``.readthedocs.yml`` and shou
       version: 3
       install:
       - requirements: docs/requirements.txt
-    system_packages: true
+      system_packages: true
 
 As you see in my case the version of Python interpreter is set to 3 and ``requirements.txt`` is located in ``docs`` subdir.
 
