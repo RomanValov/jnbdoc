@@ -86,7 +86,7 @@ If you're on Ubuntu you should run::
 
 Alternatively you could install PyPI version of the package::
 
-    sudo pip3 install nbshpinx
+    sudo pip3 install nbsphinx
 
 Now you should enable the extension in the ``conf.py``. Open the file with your favorite editor and find ``extensions`` stanza. Add ``'nbsphinx'`` to the list of extensions, i.e.::
 
