@@ -110,9 +110,12 @@ The \.ipynb extension should be omitted. Also make sure your entry is idented on
 As you see in my case I've added ``maps`` entry to the list.
 It's actually a copy of ``python_maps_example.ipynb`` from your repository renamed for the sake of convenience.
 
-Once ready please you could run the build again and check results in your browser.
-Based on the file found in your repository you will get pair of links at your ``index.html``.
-Each of the links will point to sub-section in newly created \*.html file built from your notebook.
+Once ready please run the build again and check results in your browser.
+Based on the ``maps`` file contents found in your repository you will get index page with pair of links on it.
+Each of the links will point to the sub-section in newly created ``maps.html`` file built from your notebook.
+
+The same way you could freely use arbitrary \*.ipynb file instead of RST-file, even instead of ``index.rst``.
+However you have to delete ``index.rst`` file in latter case because \*.rst files are prioritized by Sphinx.
 
 Step 7. Moving to GitHub
 ~~~~~~~~~~~~~~~~~~~~~~~~
