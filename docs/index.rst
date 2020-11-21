@@ -14,7 +14,7 @@ Welcome to nbdocs's documentation!
    maps
    cite
 
-
+.. bibliography:: references.bib
 
 Indices and tables
 ==================
