@@ -15,6 +15,7 @@ Welcome to nbdocs's documentation!
    cite
 
 .. bibliography:: references.bib
+   :style: plain
 
 Indices and tables
 ==================
